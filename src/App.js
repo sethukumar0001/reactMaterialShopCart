@@ -346,11 +346,33 @@ function App() {
                 < ProfileImg src={SE} />
               </DrawerLi>
 
-              <DrawerLi>
+              {/* <DrawerLi>
                 <HomeIconDivD></HomeIconDivD><As href="/">Home</As>
               </DrawerLi>
               <DrawerLi>
                 <FastfoodIconDiv></FastfoodIconDiv><As href="/online">Order Food Online</As>
+              </DrawerLi>
+              <DrawerLi>
+                <ProfileIconDivD></ProfileIconDivD><As href="/profile">Profile</As>
+              </DrawerLi>
+              <DrawerLi>
+                <OrderIconDiv></OrderIconDiv><As href="/orders">Your Orders</As>
+              </DrawerLi>
+
+              <DrawerLi>
+                <NotificationsActiveIconDiv></NotificationsActiveIconDiv><As href="/notification">Notifications</As>
+              </DrawerLi>
+              <DrawerLi>
+                <ContactMailIconDiv></ContactMailIconDiv><As href="/address">Your Addresses</As>
+              </DrawerLi>
+              <DrawerLi>
+                <InfoIconDiv></InfoIconDiv><As href="/about">About Us</As>
+              </DrawerLi> */}
+                <DrawerLi>
+                <HomeIconDivD></HomeIconDivD><a href="/">Home</a>
+              </DrawerLi>
+              <DrawerLi>
+                <FastfoodIconDiv></FastfoodIconDiv><a href="/online">Order Food Online</a>
               </DrawerLi>
               <DrawerLi>
                 <ProfileIconDivD></ProfileIconDivD><As href="/profile">Profile</As>
