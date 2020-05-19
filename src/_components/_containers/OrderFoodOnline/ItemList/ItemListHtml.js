@@ -19,7 +19,7 @@ const CardDiv = styled.div`
 
 `;
 
-const HotelNameText = styled.h2`
+const HotelNameText = styled.h3`
 margin-left:50px;
 `;
 

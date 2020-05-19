@@ -27,11 +27,12 @@ const CardDiv = styled.div`
 `;
 
 const MainCard = styled(Card)`
-margin-left:450px;
-margin-right:450px;
+margin-left:30%;
+margin-right:30%;
 cursor:pointer;
 margin-top:20px;
 height:auto;
+width:auto;
 `;
 const CardContentDiv = styled(CardContent)`
 // background-color:#F8F9F9;
@@ -92,7 +93,7 @@ const AdjustIconDivVeg = styled(AdjustIcon)`
 background-color: white;
 position:absolute;
 width:15px !important;
-margin-left:20%;
+margin-left:29%;
 color:#145A32;
 `;
 
@@ -140,9 +141,8 @@ margin-left:28px;
 
 
 function CartHtml(props) {
-    console.log(props.cartData)
-    const [CartArray, setCartArray] = useState(props.cartData)
 
+    const [CartArray, setCartArray] = useState(props.cartData)
     const toastMethod = () => toast.success("You Clicked Rating",
         {
             position: "bottom-right",
