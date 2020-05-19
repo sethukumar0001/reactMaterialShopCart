@@ -130,8 +130,6 @@ margin-left:-15px !important;
 color:red;
 `;
 
-
-
 const CountTag = styled.span`
 position:absolute;
 margin-top:13px !important;
@@ -153,12 +151,6 @@ function CartHtml(props) {
             progress: undefined,
         }
     );
-    const dispatch = useDispatch()
-    const removeItem = (index) => {
-        dispatch(RemoveItemToCart(index))
-        window.location.href = "/cart"
-    }
-
     return (
         <MainDiv>
             {/* <center> <RestuarantImage src={res1} />
@@ -181,11 +173,11 @@ function CartHtml(props) {
                                     {item.votes}
                                 </RatingDiv>
                                 <CountDiv>
-                                    <CountTag>0</CountTag>
-                                    <AddCircleIconDiv />
-                                    <RemoveCircleIconDiv />
+                                <CountTag>{item.quantity}</CountTag>
+                                    <AddCircleIconDiv onClick={() => props.IncCartItem(item.id)} />
+                                    <RemoveCircleIconDiv onClick={() => props.DecCartItem(item.id)} />
                                 </CountDiv>
-                                <DeleteForeverIconDiv onClick={() => removeItem(index)} />
+                                <DeleteForeverIconDiv onClick={() => props.RemoveCartItem(index)} />
                             </CardContentDiv>
                         </MainCard>
                     </CardDiv>

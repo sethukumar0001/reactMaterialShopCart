@@ -8,7 +8,18 @@ function ItemList(props) {
 
     const dispatch = useDispatch()
     const addToCart = (item) => {
-        dispatch(AddItemToCart(item))
+        let quantity = 0;
+        let data = {
+            category: item.hotelName,
+            hotelName: item.hotelName,
+            id: item.id,
+            itemName: item.itemName,
+            price: item.price,
+            type: item.type,
+            votes: item.votes,
+            quantity: quantity
+        }
+        dispatch(AddItemToCart(data))
     }
 
     const [CartArray, setCartArray] = useState([])

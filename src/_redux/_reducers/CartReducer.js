@@ -9,16 +9,16 @@ export const CartReducer = (state = [], action) => {
 
         case DECREASEITEMINCART:
             state = [...state]
-            const index = state.map(item => item.id).indexOf(action.payload.id);
+            const index = state.map(item => item.id).indexOf(action.payload);
             state[index].quantity -= 1
             return [...state]
 
 
         case INCREASEITEMINCART:
-            state = [...state]
-            const index1 = state.map(item => item.id).indexOf(action.payload.id);
-            state[index1].quantity += 1
-            return [...state]
+            state=[...state]
+            const index1= state.map(item => item.id).indexOf(action.payload);
+          state[index1].quantity+=1
+          return [...state]
 
         case REMOVEITEMTOCART:
             let newArray = [...state]

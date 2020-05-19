@@ -5,7 +5,7 @@ const AddItemToCart = (payload) => ({
     payload
 })
 
-const DecreaseItemInCart = (payload) => ({
+    const DecreaseItemInCart = (payload) => ({
     type:DECREASEITEMINCART,
     payload
 })
