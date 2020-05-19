@@ -18,12 +18,13 @@ background-color:white;
 `;
 
 const LogoDiv = styled.div`
-margin-left:450px !important;
+margin-left:30% !important;
+margin-right:30% !important;
 margin-top:60px;
 `;
 const Logo = styled.img`
 width:600px;
-height:500px;
+height:400px;
 margin-top:10px;
 @media (max-width: 768px) {
    display:none;
@@ -36,12 +37,13 @@ margin-top:10px;
        }
 `;
 const TextDiv = styled.h1`
-margin-left:140px;
+margin-left:14%;
 margin-top:20px;
 font-family:fantacy;
 `;
 const SubTextDiv = styled.p`
-margin-left:240px;
+margin-left:30%;
+margin-right:30%;
 `;
 
 class PageNotFound extends Component {
