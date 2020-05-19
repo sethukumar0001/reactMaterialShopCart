@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import FoodImage2 from '../../../_assets/food7.jpg';
-import CartEmpty from '../../../_assets/empty.png';
+import CartEmpty from '../../../_assets/cart1.png';
 import res1 from '../../../_assets/res1.jpg';
 import AdjustIcon from '@material-ui/icons/Adjust';
 
@@ -58,9 +58,10 @@ border-radius:10px;
 `;
 
 const CartEmptyImage = styled.img`
-width:680px;
-height:680px;
-margin-left:400px;
+width:400px;
+height:400px;
+margin-left:36%;
+margin-top:10%;
 `;
 
 const ContentText = styled.h4`
