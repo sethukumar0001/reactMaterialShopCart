@@ -12,9 +12,10 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
+import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
+
 import { toast } from 'react-toastify';
-import { useDispatch } from 'react-redux'
-import { RemoveItemToCart } from '../../../_redux/_actions/CartActionCreators';
+
 
 
 const MainDiv = styled.div`
@@ -113,13 +114,13 @@ margin-left:31%;
 
 const AddCircleIconDiv = styled(AddCircleIcon)`
 margin-top:10px !important;
-margin-right:8px;
+margin-right:12px;
 color:#2ECC71;
 `;
 
 const RemoveCircleIconDiv = styled(RemoveCircleIcon)`
 margin-top:10px !important;
-margin-left:8px;
+margin-left:10px;
 color:#E74C3C;
 `;
 
@@ -130,10 +131,31 @@ margin-left:-15px !important;
 color:red;
 `;
 
+const MonetizationOnIconDiv = styled(MonetizationOnIcon)`
+position:absolute;
+margin-top:5% !important;
+margin-left:10% !important;
+color:#2ECC71;
+`;
+
+const TotalAmountDiv = styled.div`
+position:absolute;
+margin-top:-8px !important;
+margin-left:18% !important;
+color:#2ECC71;
+`;
+
 const CountTag = styled.span`
 position:absolute;
 margin-top:13px !important;
 margin-left:28px;
+`;
+
+const CheckoutCardDiv = styled.div`
+
+`;
+const CheckoutCard = styled(Card)`
+
 `;
 
 
@@ -172,6 +194,8 @@ function CartHtml(props) {
                                 <RatingDiv onClick={toastMethod}>
                                     {item.votes}
                                 </RatingDiv>
+                                <MonetizationOnIconDiv></MonetizationOnIconDiv>
+                <TotalAmountDiv>{item.quantity*item.price}</TotalAmountDiv>
                                 <CountDiv>
                                 <CountTag>{item.quantity}</CountTag>
                                     <AddCircleIconDiv onClick={() => props.IncCartItem(item.id)} />
