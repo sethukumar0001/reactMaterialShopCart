@@ -24,11 +24,12 @@ margin-left:50px;
 `;
 
 const MainCard = styled(Card)`
-margin-left:450px;
-margin-right:450px;
+margin-left:30%;
+margin-right:30%;
 cursor:pointer;
 margin-top:20px;
 height:auto;
+width:auto;
 `;
 const CardContentDiv = styled(CardContent)`
 // background-color:#F8F9F9;
@@ -43,22 +44,22 @@ border-radius:10px;
 
 const ContentText = styled.h4`
 position:absolute;
-margin-top:-80px;
-margin-left:110px;
+margin-top:-6%;
+margin-left:7%;
 color:#566573;
 `;
 const ContentSubText = styled.h5`
 position:absolute;
 font-weight:500px;
 color:#808B96;
-margin-top:-48px;
-margin-left:110px
+margin-top:-3%;
+margin-left:7%;
 `
 
 const RatingDiv = styled.p`
 position:absolute;
 margin-top:-80px;
-margin-left:460px;
+margin-left:32%;
 background:#F5B041;
 padding:2px;
 border-radius:5px;
@@ -69,21 +70,21 @@ const AdjustIconDivVeg = styled(AdjustIcon)`
 background-color: white;
 position:absolute;
 width:15px !important;
-margin-left:420px;
+margin-left:29%;
 color:#145A32;
 `;
 const AdjustIconDivNonVeg = styled(AdjustIcon)`
 background-color: white;
 position:absolute;
 width:15px !important;
-margin-left:420px;
+margin-left:29%;
 color:#7B241C;
 `;
 
 const CountDiv = styled.div`
 position absolute;
-margin-top:-20px;
-margin-left:440px;
+margin-top:-2%;
+margin-left:31%;
 `;
 const CountTag = styled.span`
 position:absolute;

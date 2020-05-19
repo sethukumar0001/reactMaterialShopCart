@@ -61,7 +61,7 @@ const SearchDiv = styled.div`
 position: relative;
 margin-top:210px;
 display:flex;
-margin-left:80px;
+margin-left:5%;
 position: absolute;
 `;
 const InputStyleForSearch = styled.input`

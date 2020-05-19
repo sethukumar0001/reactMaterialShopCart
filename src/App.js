@@ -59,7 +59,6 @@ const StyledHeader = styled.header`
 `;
 
 const MenuIconButton = styled.div`
-  // margin-right:1260px;
   margin-top:15px;
   margin-left:30px;
   color:white;
@@ -94,8 +93,6 @@ const CloseIconButton = styled.div`
 `;
 
 const Nav = styled.nav`
-  // display: block;
-  // margin:3px 10px;
   @media (max-width: 768px) {
     display:none;
    }
@@ -105,7 +102,6 @@ const Nav = styled.nav`
 `;
 
 const Ul = styled.ul`
-  // list-style: none;
   @media (max-width: 768px) {
     max-width:100%;
     margin:0px;
@@ -129,12 +125,10 @@ const Li = styled.li`
 const A = styled.a`
   font-family: Impact, fantasy;
   transition: all 0.3s ease 0s;
-  // font-size:19px;
   color:white;
   &:hover {
     color: green;
   }
-  // text-decoration: none;
   margin-right:50px;
   @media (max-width: 768px) {
     color: 	darkslategray;

@@ -19,11 +19,12 @@ const CardDiv = styled.div`
 `;
 
 const MainCard = styled(Card)`
-margin-left:300px;
-margin-right:300px;
+margin-left:25%;
+margin-right:25%;
 cursor:pointer;
 margin-top:20px;
 height:auto;
+width:auto;
 
 
 `;
@@ -33,41 +34,41 @@ const CardContentDiv = styled(CardContent)`
 
 const OrderItemImage = styled.img`
 position:relative;
-width:150px;
-height:150px;
+width:100px;
+height:100px;
 border-radius:10px;
 `;
 
-const ContentHeader = styled.h2`
+const ContentHeader = styled.h4`
 position:absolute;
-margin-top:-150px;
+margin-top:-7.5%;
 margin-left:180px;
 color:#273746;
 `;
 
 
-const ContentText = styled.h3`
+const ContentText = styled.h5`
 position:absolute;
-margin-top:-105px;
+margin-top:-5.5%;
 margin-left:180px;
 color:#566573;
 `;
-const ContentSubText = styled.h4`
+const ContentSubText = styled.h5`
 position:absolute;
 font-weight:500px;
 color:#808B96;
-margin-top:-70px;
+margin-top:-3.5%;
 margin-left:180px
 `
-const ContentSubText1 = styled.h4`
+const ContentSubText1 = styled.h5`
 position:absolute;
 font-weight:500px;
 color:#DC7633;
-margin-top:-40px;
+margin-top:-1.5%;
 margin-left:180px
 `;
 
-const ContentSubText2 = styled.h4`
+const ContentSubText2 = styled.h5`
 position:absolute;
 font-weight:500px;
 color:#45B39D;
@@ -77,8 +78,8 @@ margin-left:180px
 
 const RatingDiv = styled.p`
 position:absolute;
-margin-top:-145px;
-margin-left:740px;
+margin-top:-7%;
+margin-left:43%;
 background:#28B463;
 padding:3px;
 border-radius:5px;
@@ -104,9 +105,9 @@ function OnlineHtml(props) {
                                 <ContentSubText1>
                                     {item.offer}
                                 </ContentSubText1>
-                                <ContentSubText2>
+                                {/* <ContentSubText2>
                                     {item.instructions}
-                                </ContentSubText2>
+                                </ContentSubText2> */}
                                 <RatingDiv>
                                     {item.rating}
                                 </RatingDiv>

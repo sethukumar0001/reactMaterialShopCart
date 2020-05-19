@@ -64,24 +64,24 @@ height:680px;
 margin-left:400px;
 `;
 
-const ContentText = styled.h3`
+const ContentText = styled.h4`
 position:absolute;
-margin-top:-80px;
-margin-left:110px;
+margin-top:-6%;
+margin-left:7%;
 color:#566573;
 `;
 const ContentSubText = styled.h4`
 position:absolute;
 font-weight:500px;
 color:#808B96;
-margin-top:-48px;
-margin-left:110px
+margin-top:-4%;
+margin-left:7%;
 `
 
 const RatingDiv = styled.p`
 position:absolute;
-margin-top:-80px;
-margin-left:460px;
+margin-top:-6%;
+margin-left:32%;
 background:#F5B041;
 padding:2px;
 border-radius:5px;
@@ -92,7 +92,7 @@ const AdjustIconDivVeg = styled(AdjustIcon)`
 background-color: white;
 position:absolute;
 width:15px !important;
-margin-left:420px;
+margin-left:20%;
 color:#145A32;
 `;
 
@@ -100,14 +100,15 @@ const AdjustIconDivNonVeg = styled(AdjustIcon)`
 background-color: white;
 position:absolute;
 width:15px !important;
-margin-left:420px;
+margin-left:29%;
+margin-top:-5px;
 color:#7B241C;
 `;
 
 const CountDiv = styled.div`
 position absolute;
 margin-top:-20px;
-margin-left:440px;
+margin-left:31%;
 `;
 
 const AddCircleIconDiv = styled(AddCircleIcon)`
