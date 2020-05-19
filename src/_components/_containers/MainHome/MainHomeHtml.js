@@ -62,15 +62,14 @@ position: relative;
 margin-top:210px;
 display:flex;
 margin-left:5%;
-position: absolute;
 `;
 const InputStyleForSearch = styled.input`
 
 background-color:white;
 border:none;
 padding:15px;
-width:300px;
-margin-left:300px;
+width:20%;
+margin-left:23%;
 border-radius:5px;
 padding-left:40px;
 outline: none;
@@ -81,7 +80,7 @@ const InputStyleForSearch1 = styled.input`
 background-color:white;
 border:none;
 padding:10px;
-width:300px;
+width:20%;
 margin-left:10px;
 border-radius:5px;
 padding-left:40px;
@@ -104,7 +103,6 @@ color:black;
 text-decoration: none;
 cursor:pointer;
 outline: none;
-
 `;
 
 const SearchIconTag = styled(SearchIcon)`
@@ -115,13 +113,13 @@ margin-top:5px;
 const LocationOnIconTag = styled(LocationOnIcon)`
 background-color:white;
 position: absolute;
-left:310px;
+left:23.5%;
 margin-top:12px;
 `;
 const LocationCityIconTag = styled(LocationCityIcon)`
 background-color:white;
 position: absolute;
-left:673px;
+left:48.5%;
 margin-top:12px;
 `;
 
@@ -137,7 +135,7 @@ align-items: center;
 const MainCard = styled(Card)`
 height:250px;
 width:300px;
-margin-top:450px;
+margin-top:200px;
 margin-left:10px;
 `;
 
@@ -150,7 +148,7 @@ const CardMediaDiv = styled(CardMedia)`
 height: 160px;
 `;
 
-const CardText = styled.h2`
+const CardText = styled.h3`
 font-family:fantacy;
 margin-top:20px;
 margin-left:40px;
@@ -161,7 +159,7 @@ margin-left:40px;
 const LocationDiv = styled.div`
 `;
 
-const LocationText = styled.h1`
+const LocationText = styled.h2`
 font-family:Arial, sans-serif;
 margin-left:100px;
 margin-top:80px;
@@ -190,7 +188,7 @@ const LocationCardMediaDiv = styled(CardMedia)`
 height: 360px;
 `;
 
-const LocationCardText = styled.h2`
+const LocationCardText = styled.h3`
 font-family:fantacy;
 margin-top:20px;
 margin-left:40px;
@@ -202,17 +200,17 @@ const OptionDiv = styled.div`
 background-color:white !important;
 `;
 
-const OptionText = styled.h1`
+const OptionText = styled.h2`
 font-family:Arial, sans-serif;
 background-color:white;
 margin-top:100px;
 margin-left:100px;
 `;
 
-const OptionSubText = styled.h2`
+const OptionSubText = styled.h3`
 font-family:Times;
 margin-left:100px;
-font-size:25px;
+font-size:20px;
 margin-top:20px;    
 `;
 
@@ -245,16 +243,14 @@ const FooterDiv = styled.div`
 
 const FooterText = styled.p`
 color:black;
-margin-top:100px;
-padding:20px;
+padding:10px;
 text-align: center;
-height: 50px;
+height: 40px;
 background-color: #F8F9F9;
-position: relative;
 margin-top: 180px;
-/* negative value of footer height */
-height: 100px;
+height: 40px;
 clear: both;
+font-size:14px;
 `;
 
 
@@ -283,8 +279,10 @@ function MainHomeHtml(props) {
 
                 {/* Search div */}
                 <SearchDiv>
-                    <LocationOnIconTag /><InputStyleForSearch placeholder="Seach by Location" />
-                    <LocationCityIconTag /><InputStyleForSearch1 placeholder="Seach by Item" />
+                    <LocationOnIconTag />
+                    <InputStyleForSearch placeholder="Seach by Location" />
+                    <LocationCityIconTag />
+                    <InputStyleForSearch1 placeholder="Seach by Item" />
                     <SearchButton type="submit"><SearchIconTag /></SearchButton>
                 </SearchDiv>
 

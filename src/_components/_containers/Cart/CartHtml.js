@@ -17,8 +17,6 @@ import { useDispatch } from 'react-redux'
 import { RemoveItemToCart } from '../../../_redux/_actions/CartActionCreators';
 
 
-
-
 const MainDiv = styled.div`
 `;
 

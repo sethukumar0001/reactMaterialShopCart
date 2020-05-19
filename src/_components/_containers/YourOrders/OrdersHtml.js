@@ -10,7 +10,7 @@ const MainDiv = styled.div`
 
 `;
 
-const HeaderText = styled.h1`
+const HeaderText = styled.h2`
 margin-left:100px;
 margin-top:50px;
 `;
@@ -20,8 +20,8 @@ const CardDiv = styled.div`
 `;
 
 const MainCard = styled(Card)`
-margin-left:400px;
-margin-right:400px;
+margin-left:25%;
+margin-right:25%;
 cursor:pointer;
 
 
@@ -47,25 +47,22 @@ const Devider = styled.hr`
 margin-top:10px;
 `;
 
-const ContentText = styled.h4`
+const ContentText = styled.h5`
 
 `;
-const ContentSubText = styled.h4`
-font-weight:500px;
+const ContentSubText = styled.h5`
 margin-left:20px;
 color:#566573;
 `
 const ContentSubText1 = styled.h4`
 color:#566573;
 margin-top:20px;
-font-weight:500px;
 position:relative;
 color:green;
 `;
 const ContentSubText2 = styled.h4`
 color:#566573;
-font-weight:500px;
-margin-left:430px;
+margin-left:35%;
 margin-top:-28px;
 position:absolute;
 color:red;
