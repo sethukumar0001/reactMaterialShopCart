@@ -194,7 +194,7 @@ function CartHtml(props) {
                                 <RatingDiv onClick={toastMethod}>
                                     {item.votes}
                                 </RatingDiv>
-                                <MonetizationOnIconDiv></MonetizationOnIconDiv>
+                                {/* <MonetizationOnIconDiv></MonetizationOnIconDiv> */}
                 <TotalAmountDiv>{item.quantity*item.price}</TotalAmountDiv>
                                 <CountDiv>
                                 <CountTag>{item.quantity}</CountTag>
