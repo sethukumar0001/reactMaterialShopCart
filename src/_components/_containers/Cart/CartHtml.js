@@ -46,7 +46,7 @@ margin-top:10px;
 
 const ResturantName = styled.p`
 position:absolute;
-margin-left:10px;
+margin-left:1.5%;
 margin-top:-1px;
 
 `;
