@@ -57,6 +57,7 @@ width:auto;
     max-width:100%;
     margin:0%;
     margin-top:10%;
+    height:auto;
   }
   @media (max-width: 458px) {
 
@@ -100,7 +101,7 @@ color:#566573;
   @media (max-width: 458px) {
     position:absolute;
     max-width:100%;
-    margin-top:-28%;
+    margin-top:-24%;
     margin-left:30%;
   }
 `;
@@ -118,7 +119,7 @@ margin-left:7%;
   @media (max-width: 458px) {
     position:absolute;
     max-width:100%;
-    margin-top:-18%;
+    margin-top:-14%;
     margin-left:30%;
   }
 `
@@ -139,7 +140,7 @@ color:white;
   @media (max-width: 458px) {
     position:absolute;
     max-width:100%;
-    margin-top:-28%;
+    margin-top:-24%;
     margin-left:80%;
   }
 `;

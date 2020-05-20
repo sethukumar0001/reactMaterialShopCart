@@ -107,7 +107,7 @@ position:absolute;
 font-weight:500px;
 color:#808B96;
 margin-top:-3.5%;
-margin-left:180px
+margin-left:180px;
 @media (max-width: 768px) {
     position:absolute;
     max-width:100%;
@@ -125,7 +125,7 @@ position:absolute;
 font-weight:500px;
 color:#DC7633;
 margin-top:-1.5%;
-margin-left:180px
+margin-left:180px;
 @media (max-width: 768px) {
     position:absolute;
     max-width:100%;
@@ -151,8 +151,8 @@ color:white;
     position:absolute;
     max-width:100%;
     margin:0%;
-    margin-top:-37%;
-    margin-left:75% !important;
+    margin-top:-24%;
+    margin-left:80% !important;
   }
   @media (max-width: 458px) {
   }

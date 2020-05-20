@@ -184,7 +184,7 @@ margin-top:12px;
     max-width:50%;
     margin:0px;
     margin-left:-29%;
-    margin-top:16%
+    margin-top:15%
   }
   @media (max-width: 458px) {
   }

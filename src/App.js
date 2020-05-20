@@ -52,13 +52,6 @@ const MainDiv = styled.main`
 const StyledHeaderWrapper = styled.div`
   background-color:#212F3D;
   height:55px;
-  @media (max-width: 768px) {
-      width:100%;
-      margin:0px;
-    }
-    @media (max-width: 458px) {
-      width:100%;
-    }
 `;
 
 const StyledHeader = styled.header`
@@ -79,10 +72,8 @@ const MenuIconButton = styled.div`
     margin-right: 90%;
   }
   @media (width: 375px) {
-    // margin-right: 320px;
   }
   @media (width: 425px) {
-    // margin-right: 380px;
   }
 
 `;
@@ -107,7 +98,7 @@ const Nav = styled.nav`
     display:none;
    }
    @media (max-width: 458px) {
-     display:none;
+    display:none;
    }
 `;
 
@@ -156,7 +147,7 @@ postion:relative;
 display:block;
 margin-top:100px;
 @media (max-width: 768px) {
-  max-width:100%;
+  max-width:100% important;
   margin:20px;
  }
  @media (max-width: 458px) {
@@ -199,7 +190,7 @@ padding:15px;
   text-decoration: none;
   @media (max-width: 768px) {
     color: 	darkslategray;
-    max-width:100%;
+    max-width:100% !important;
     margin:0px;
   }
     @media (max-width: 458px) {
@@ -309,6 +300,22 @@ const AddShoppingCartIconDiv = styled(AddShoppingCartIcon)`
 position:absolute;
 margin-left:85%;
 margin-top:-10px;
+  @media (max-width: 768px) {
+    display:flex !important;
+    max-width:100%;
+  }
+  @media (max-width: 458px) {
+    margin-right: 90%;
+  }
+  @media (width: 375px) {
+  }
+  @media (width: 425px) {
+  }
+`;
+const AddShoppingCartIconDivDrawer = styled(AddShoppingCartIcon)`
+background-color: white;
+position:absolute;
+margin-left:30px;
 @media (max-width: 768px) {
   max-width:100%;
   margin:0px;
@@ -322,6 +329,14 @@ position:absolute;
 margin-left:86.6%;
 margin-top:-22px;
 color:white;
+@media (max-width: 768px) {
+  position:absolute;
+  max-width:100%;
+  margin:0px;
+  margin-left:-5%
+ }
+ @media (max-width: 458px) {
+ }
 
 `;
 
@@ -342,6 +357,7 @@ margin-left:50px;
 @media (max-width: 768px) {
   max-width:90%;
   margin:0px;
+  margin-left:-20%;
 }
 @media (max-width: 458px) {
   width:100%;
@@ -435,7 +451,7 @@ function App() {
               </DrawerLi>
 
               <DrawerLi>
-                <AddShoppingCartIconDiv></AddShoppingCartIconDiv><As href="/cart">Cart</As>
+                <AddShoppingCartIconDivDrawer></AddShoppingCartIconDivDrawer><As href="/cart">Cart</As>
               </DrawerLi>
 
               <DrawerLi>
