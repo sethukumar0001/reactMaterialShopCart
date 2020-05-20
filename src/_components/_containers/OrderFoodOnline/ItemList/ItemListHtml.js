@@ -11,16 +11,39 @@ import { toast } from 'react-toastify';
 
 
 const MainDiv = styled.div`
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+
+  }
 
 `;
 
 
 const CardDiv = styled.div`
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+
+  }
 
 `;
 
 const HotelNameText = styled.h3`
 margin-left:50px;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+    margin-left:10%;
+    margin-top:10%;
+  }
+  @media (max-width: 458px) {
+
+  }
 `;
 
 const MainCard = styled(Card)`
@@ -30,9 +53,25 @@ cursor:pointer;
 margin-top:20px;
 height:auto;
 width:auto;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+    margin-top:10%;
+    height:auto;
+  }
+  @media (max-width: 458px) {
+
+  }
 `;
 const CardContentDiv = styled(CardContent)`
 // background-color:#F8F9F9;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+
+  }
 `;
 
 const OrderItemImage = styled.img`
@@ -40,6 +79,13 @@ position:relative;
 width:80px;
 height:80px;
 border-radius:10px;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+
+  }
 `;
 
 const ContentText = styled.h4`
@@ -47,6 +93,17 @@ position:absolute;
 margin-top:-6%;
 margin-left:7%;
 color:#566573;
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+    position:absolute;
+    max-width:100%;
+    margin-top:-24%;
+    margin-left:30%;
+  }
 `;
 const ContentSubText = styled.h5`
 position:absolute;
@@ -54,6 +111,17 @@ font-weight:500px;
 color:#808B96;
 margin-top:-3%;
 margin-left:7%;
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+    position:absolute;
+    max-width:100%;
+    margin-top:-14%;
+    margin-left:30%;
+  }
 `
 
 const RatingDiv = styled.p`
@@ -64,6 +132,17 @@ background:#F5B041;
 padding:2px;
 border-radius:5px;
 color:white;
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+    position:absolute;
+    max-width:100%;
+    margin-top:-24%;
+    margin-left:80%;
+  }
 `;
 
 const AdjustIconDivVeg = styled(AdjustIcon)`
@@ -72,6 +151,20 @@ position:absolute;
 width:15px !important;
 margin-left:29%;
 color:#145A32;
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+    margin-left:48% !important;
+    margin-top:-2% !important;
+  }
+  @media (max-width: 458px) {
+    max-width:100%;
+    margin:0%;
+ 
+
+  }
+
 `;
 const AdjustIconDivNonVeg = styled(AdjustIcon)`
 background-color: white;
@@ -79,12 +172,37 @@ position:absolute;
 width:15px !important;
 margin-left:29%;
 color:#7B241C;
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+    margin-left:48% !important;
+    margin-top:-2% !important;
+  }
+  @media (max-width: 458px) {
+    max-width:100%;
+    margin:0%;
+ 
+
+  }
+
 `;
 
 const CountDiv = styled.div`
 position absolute;
 margin-top:-2%;
 margin-left:31%;
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+    position:absolute;
+    max-width:100%;
+    margin-top:-8%;
+    margin-left:60%;
+  }
 `;
 const CountTag = styled.span`
 position:absolute;

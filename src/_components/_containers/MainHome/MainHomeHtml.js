@@ -33,10 +33,6 @@ background-color:white;
   }
   @media (max-width: 458px) {
   }
-  @media (width: 375px) {
-  }
-  @media (width: 425px) { 
-  }
 `;
 
 //carousel div
@@ -44,14 +40,33 @@ background-color:white;
 const CarouselDiv = styled.div`
 height:100px;
 position: relative;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0px;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const CarouselMain = styled(Carousel)`
 height:100px;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0px;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const CarouselImages = styled.img`
 height:500px;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0px;
+    height:300px;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 
@@ -62,6 +77,13 @@ position: relative;
 margin-top:210px;
 display:flex;
 margin-left:5%;
+@media (max-width: 768px) {
+    flex-direction:column;
+    max-width:100%;
+    margin:0px;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 const InputStyleForSearch = styled.input`
 
@@ -74,6 +96,16 @@ border-radius:5px;
 padding-left:40px;
 outline: none;
 font-size:15px;
+@media (max-width: 768px) {
+    width:50%;
+    margin:0px;
+    margin-left:18%;
+    margin-bottom:2%;
+    padding:10px;
+    padding-left:10%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const InputStyleForSearch1 = styled.input`
@@ -84,8 +116,19 @@ width:20%;
 margin-left:10px;
 border-radius:5px;
 padding-left:40px;
+
 outline: none;
 font-size:15px;
+@media (max-width: 768px) {
+    width:50%;
+    margin:0px;
+    margin-left:18%;
+    padding:10px;
+    padding-left:10%;
+    margin-bottom:2%;
+  }
+  @media (max-width: 458px) {
+  }
 
 `;
 
@@ -103,11 +146,19 @@ color:black;
 text-decoration: none;
 cursor:pointer;
 outline: none;
+@media (max-width: 768px) {
+    max-width:50%;
+    margin:0px;
+    margin-left:40%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const SearchIconTag = styled(SearchIcon)`
 background-color:white;
 margin-top:5px;
+
 `;
 
 const LocationOnIconTag = styled(LocationOnIcon)`
@@ -115,12 +166,28 @@ background-color:white;
 position: absolute;
 left:23.5%;
 margin-top:12px;
+@media (max-width: 768px) {
+    max-width:50%;
+    margin:0px;
+    margin-left:-4%;
+    margin-top:2%
+  }
+  @media (max-width: 458px) {
+  }
 `;
 const LocationCityIconTag = styled(LocationCityIcon)`
 background-color:white;
 position: absolute;
 left:48.5%;
 margin-top:12px;
+@media (max-width: 768px) {
+    max-width:50%;
+    margin:0px;
+    margin-left:-29%;
+    margin-top:15%
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 
@@ -130,6 +197,14 @@ const CardDiv = styled.div`
 display:flex;
 justify-content: center;
 align-items: center;
+@media (max-width: 768px) {
+    max-width:100%;
+    flex-direction:column;
+    margin:0px;
+    margin-top:30%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const MainCard = styled(Card)`
@@ -137,6 +212,13 @@ height:250px;
 width:300px;
 margin-top:200px;
 margin-left:10px;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0px;
+    margin-top:10%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const CardContentDiv = styled(CardContent)`
@@ -157,12 +239,26 @@ margin-left:40px;
 // Location div
 
 const LocationDiv = styled.div`
+@media (max-width: 768px) {
+    max-width:100%;
+    // margin-top:-30%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const LocationText = styled.h2`
 font-family:Arial, sans-serif;
 margin-left:100px;
 margin-top:80px;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin-top:10%;
+    margin-left:10%;
+  }
+  @media (max-width: 458px) {
+  }
+
 `;
 
 const LocationCardDiv = styled.div`
@@ -170,6 +266,15 @@ display:flex;
 justify-content: center;
 align-items: center;
 border-radius:50px !important;
+@media (max-width: 768px) {
+    max-width:100%;
+    flex-direction:column;
+    margin:0px;
+    // margin-top:10%;
+  }
+  @media (max-width: 458px) {
+  }
+
 `;
 
 const LocationMainCard = styled(Card)`
@@ -198,6 +303,11 @@ margin-left:40px;
 
 const OptionDiv = styled.div`
 background-color:white !important;
+@media (max-width: 768px) {
+  display:none;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const OptionText = styled.h2`
@@ -242,6 +352,14 @@ const FooterDiv = styled.div`
 position:absolute;
 background-color: #D6DBDF;
 clear: both;
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+    margin-top:10%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const FooterText = styled.p`

@@ -34,7 +34,7 @@ import MoodIcon from '@material-ui/icons/Mood';
 
 const MainDiv = styled.main`
 @media (max-width: 768px) {
-  background-color:#F8F9F9 !important;
+  // background-color:#F8F9F9 !important;
     width:100%;
     margin:0px;
     overflow:hidden;
@@ -72,10 +72,8 @@ const MenuIconButton = styled.div`
     margin-right: 90%;
   }
   @media (width: 375px) {
-    // margin-right: 320px;
   }
   @media (width: 425px) {
-    // margin-right: 380px;
   }
 
 `;
@@ -86,10 +84,13 @@ const CloseIconButton = styled.div`
   cursor:pointer;
   @media (max-width: 768px) {
     max-width:100%;
-    margin:1px;
-   }
-   @media (max-width: 458px) {
-   }
+    margin:0px;
+    margin-left:90%;
+    margin-top: 3%;
+  }
+  @media (max-width: 458px) {
+    width:100%;
+  }
 `;
 
 const Nav = styled.nav`
@@ -97,7 +98,7 @@ const Nav = styled.nav`
     display:none;
    }
    @media (max-width: 458px) {
-     display:none;
+    display:none;
    }
 `;
 
@@ -146,7 +147,7 @@ postion:relative;
 display:block;
 margin-top:100px;
 @media (max-width: 768px) {
-  max-width:100%;
+  max-width:100% important;
   margin:20px;
  }
  @media (max-width: 458px) {
@@ -159,6 +160,7 @@ margin-top:20px;
   max-width:100%;
   margin:0px;
   padding:10px;
+  margin-left:10%;
  }
  @media (max-width: 458px) {
  }
@@ -188,7 +190,7 @@ padding:15px;
   text-decoration: none;
   @media (max-width: 768px) {
     color: 	darkslategray;
-    max-width:100%;
+    max-width:100% !important;
     margin:0px;
   }
     @media (max-width: 458px) {
@@ -203,17 +205,38 @@ const OrderIconDiv = styled(ChildFriendlyIcon)`
 background-color: white;
 position:absolute;
 margin-left:30px;
+@media (max-width: 768px) {
+  max-width:100%;
+  margin:0px;
+  margin-left:-5%
+ }
+ @media (max-width: 458px) {
+ }
 `;
 const ProfileIconDivD = styled(SupervisorAccountIcon)`
 background-color: white;
 position:absolute;
 margin-left:30px;
+@media (max-width: 768px) {
+  max-width:100%;
+  margin:0px;
+  margin-left:-5%
+ }
+ @media (max-width: 458px) {
+ }
+
 `;
 const HomeIconDivD = styled(HomeIcon)`
 background-color: white;
 position:absolute;
 margin-left:30px;
-
+@media (max-width: 768px) {
+  max-width:100%;
+  margin:0px;
+  margin-left:-5%
+ }
+ @media (max-width: 458px) {
+ }
 `;
 const SettingsIconDiv = styled(SettingsIcon)`
 background-color: white;
@@ -225,23 +248,51 @@ const ContactMailIconDiv = styled(ContactMailIcon)`
 background-color: white;
 position:absolute;
 margin-left:30px;
+@media (max-width: 768px) {
+  max-width:100%;
+  margin:0px;
+  margin-left:-5%
+ }
+ @media (max-width: 458px) {
+ }
 `;
 const InfoIconDiv = styled(InfoIcon)`
 background-color: white;
 position:absolute;
 margin-left:30px;
+@media (max-width: 768px) {
+  max-width:100%;
+  margin:0px;
+  margin-left:-5%
+ }
+ @media (max-width: 458px) {
+ }
 `;
 
 const FastfoodIconDiv = styled(FastfoodIcon)`
 background-color: white;
 position:absolute;
 margin-left:30px;
+@media (max-width: 768px) {
+  max-width:100%;
+  margin:0px;
+  margin-left:-5%
+ }
+ @media (max-width: 458px) {
+ }
 `;
 
 const NotificationsActiveIconDiv = styled(NotificationsActiveIcon)`
 background-color: white;
 position:absolute;
 margin-left:30px;
+@media (max-width: 768px) {
+  max-width:100%;
+  margin:0px;
+  margin-left:-5%
+ }
+ @media (max-width: 458px) {
+ }
 `;
 
 const AddShoppingCartIconDiv = styled(AddShoppingCartIcon)`
@@ -249,12 +300,44 @@ const AddShoppingCartIconDiv = styled(AddShoppingCartIcon)`
 position:absolute;
 margin-left:85%;
 margin-top:-10px;
+  @media (max-width: 768px) {
+    display:flex !important;
+    max-width:100%;
+  }
+  @media (max-width: 458px) {
+    margin-right: 90%;
+  }
+  @media (width: 375px) {
+  }
+  @media (width: 425px) {
+  }
+`;
+const AddShoppingCartIconDivDrawer = styled(AddShoppingCartIcon)`
+background-color: white;
+position:absolute;
+margin-left:30px;
+@media (max-width: 768px) {
+  max-width:100%;
+  margin:0px;
+  margin-left:-5%
+ }
+ @media (max-width: 458px) {
+ }
 `;
 const ShoppingCartCount = styled.p`
 position:absolute;
 margin-left:86.6%;
 margin-top:-22px;
 color:white;
+@media (max-width: 768px) {
+  position:absolute;
+  max-width:100%;
+  margin:0px;
+  margin-left:-5%
+ }
+ @media (max-width: 458px) {
+ }
+
 `;
 
 const MoodIconDiv = styled(MoodIcon)`
@@ -271,6 +354,14 @@ width:150px;
 height:150px;
 margin-top:-100px;
 margin-left:50px;
+@media (max-width: 768px) {
+  max-width:90%;
+  margin:0px;
+  margin-left:-20%;
+}
+@media (max-width: 458px) {
+  width:100%;
+}
 `;
 
 
@@ -357,6 +448,10 @@ function App() {
               </DrawerLi>
               <DrawerLi>
                 <OrderIconDiv></OrderIconDiv><As href="/orders">Your Orders</As>
+              </DrawerLi>
+
+              <DrawerLi>
+                <AddShoppingCartIconDivDrawer></AddShoppingCartIconDivDrawer><As href="/cart">Cart</As>
               </DrawerLi>
 
               <DrawerLi>
