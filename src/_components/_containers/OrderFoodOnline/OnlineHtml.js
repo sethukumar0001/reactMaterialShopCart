@@ -10,11 +10,22 @@ import history from '../../../_helpers/history';
 
 
 const MainDiv = styled.div`
-
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 
 const CardDiv = styled.div`
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+  }
 
 `;
 
@@ -25,11 +36,25 @@ cursor:pointer;
 margin-top:20px;
 height:auto;
 width:auto;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+    margin-top:5%;
+  }
+  @media (max-width: 458px) {
+  }
 
 
 `;
 const CardContentDiv = styled(CardContent)`
 // background-color:#F8F9F9;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+    margin-top:5%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const OrderItemImage = styled.img`
@@ -37,6 +62,12 @@ position:relative;
 width:100px;
 height:100px;
 border-radius:10px;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 const ContentHeader = styled.h4`
@@ -44,6 +75,15 @@ position:absolute;
 margin-top:-7.5%;
 margin-left:180px;
 color:#273746;
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+    margin-top:-30%;
+    margin-left:35%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 
@@ -52,6 +92,15 @@ position:absolute;
 margin-top:-5.5%;
 margin-left:180px;
 color:#566573;
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+    margin-top:-20%;
+    margin-left:35%;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 const ContentSubText = styled.h5`
 position:absolute;
@@ -59,6 +108,17 @@ font-weight:500px;
 color:#808B96;
 margin-top:-3.5%;
 margin-left:180px
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+    margin-top:-10%;
+    margin-left:35%;
+  }
+  @media (max-width: 458px) {
+    margin-top:-10%;
+    margin-left:35% !important;
+  }
 `
 const ContentSubText1 = styled.h5`
 position:absolute;
@@ -66,14 +126,17 @@ font-weight:500px;
 color:#DC7633;
 margin-top:-1.5%;
 margin-left:180px
-`;
-
-const ContentSubText2 = styled.h5`
-position:absolute;
-font-weight:500px;
-color:#45B39D;
-margin-top:-13px;
-margin-left:180px
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+    // margin-top:%;
+    margin-left:45% !important;
+  }
+  @media (max-width: 458px) {
+      
+    margin-left:35% !important;
+  }
 `;
 
 const RatingDiv = styled.p`
@@ -84,6 +147,15 @@ background:#28B463;
 padding:3px;
 border-radius:5px;
 color:white;
+@media (max-width: 768px) {
+    position:absolute;
+    max-width:100%;
+    margin:0%;
+    margin-top:-37%;
+    margin-left:75% !important;
+  }
+  @media (max-width: 458px) {
+  }
 `;
 
 

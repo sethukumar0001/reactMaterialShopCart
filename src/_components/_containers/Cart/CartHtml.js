@@ -63,6 +63,14 @@ width:400px;
 height:400px;
 margin-left:36%;
 margin-top:10%;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0px;
+    margin-top:30%;
+    // margin-left:-5%
+   }
+   @media (max-width: 458px) {
+   }
 `;
 
 const ContentText = styled.h4`
