@@ -218,6 +218,7 @@ const RestuarantDiv = styled.div`
 display:flex;
 margin-left:50px;
 margin-top:40px;
+margin-bottom:70px;
 `;
 const RestuarantDiv1 = styled.div`
 display:flex;
@@ -238,18 +239,15 @@ font-size:15px;
 `;
 
 const FooterDiv = styled.div`
-
+position:absolute;
+background-color: #D6DBDF;
+clear: both;
 `;
 
 const FooterText = styled.p`
 color:black;
 padding:10px;
 text-align: center;
-height: 40px;
-background-color: #F8F9F9;
-margin-top: 180px;
-height: 40px;
-clear: both;
 font-size:14px;
 `;
 

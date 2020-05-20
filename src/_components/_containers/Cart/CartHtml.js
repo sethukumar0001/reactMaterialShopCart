@@ -46,7 +46,7 @@ margin-top:10px;
 
 const ResturantName = styled.p`
 position:absolute;
-margin-left:2px;
+margin-left:10px;
 margin-top:-1px;
 
 `;
@@ -127,7 +127,7 @@ color:#E74C3C;
 const DeleteForeverIconDiv = styled(DeleteForeverIcon)`
 position:absolute;
 margin-top:80px !important;
-margin-left:-15px !important;
+margin-left:-6.5% !important;
 color:red;
 `;
 
@@ -194,8 +194,8 @@ function CartHtml(props) {
                                 <RatingDiv onClick={toastMethod}>
                                     {item.votes}
                                 </RatingDiv>
-                                <MonetizationOnIconDiv></MonetizationOnIconDiv>
-                <TotalAmountDiv>{item.quantity*item.price}</TotalAmountDiv>
+                                {/* <MonetizationOnIconDiv></MonetizationOnIconDiv> */}
+                             <TotalAmountDiv>{item.quantity*item.price}</TotalAmountDiv>
                                 <CountDiv>
                                 <CountTag>{item.quantity}</CountTag>
                                     <AddCircleIconDiv onClick={() => props.IncCartItem(item.id)} />
