@@ -35,19 +35,11 @@ import MoodIcon from '@material-ui/icons/Mood';
 const MainDiv = styled.main`
 @media (max-width: 768px) {
   // background-color:#F8F9F9 !important;
-    width:100%;
+    max-width:100%;
     margin:0px;
-    overflow:hidden;
+    overflow:hidden !important;
   }
-  @media (max-width: 458px) {
-    width:100%;
-  }
-  @media (width: 375px) {
-    width:100%;
-  }
-  @media (width: 425px) {
-    width:100%;
-  }
+ 
 `;
 const StyledHeaderWrapper = styled.div`
   background-color:#212F3D;
@@ -67,9 +59,10 @@ const MenuIconButton = styled.div`
     display:flex;
     max-width:100%;
     margin-top: 19px;
+    margin-right: 60%;
   }
   @media (max-width: 458px) {
-    margin-right: 90%;
+    // margin-right: 90%;
   }
   @media (width: 375px) {
   }
@@ -89,16 +82,17 @@ const CloseIconButton = styled.div`
     margin-top: 3%;
   }
   @media (max-width: 458px) {
-    width:100%;
   }
 `;
 
 const Nav = styled.nav`
+postion:relative;
   @media (max-width: 768px) {
-    display:none;
+    max-width:100%;
+    margin:0px;
    }
    @media (max-width: 458px) {
-    display:none;
+
    }
 `;
 
@@ -147,6 +141,7 @@ postion:relative;
 display:block;
 margin-top:100px;
 @media (max-width: 768px) {
+  postion:relative;
   max-width:100% important;
   margin:20px;
  }
@@ -157,10 +152,10 @@ margin-top:100px;
 const DrawerLi = styled.li`
 margin-top:20px;
 @media (max-width: 768px) {
-  max-width:100%;
+  max-width:100% !important;
   margin:0px;
   padding:10px;
-  margin-left:10%;
+  // margin-left:10%;
  }
  @media (max-width: 458px) {
  }
@@ -238,11 +233,6 @@ margin-left:30px;
  @media (max-width: 458px) {
  }
 `;
-const SettingsIconDiv = styled(SettingsIcon)`
-background-color: white;
-position:absolute;
-margin-left:30px;
-`;
 
 const ContactMailIconDiv = styled(ContactMailIcon)`
 background-color: white;
@@ -301,11 +291,15 @@ position:absolute;
 margin-left:85%;
 margin-top:-10px;
   @media (max-width: 768px) {
-    display:flex !important;
+    position:absolute;
     max-width:100%;
+    margin:0px;
+    color:white !important;
+    margin-left:-17%;
+    margin-top:2%;
   }
   @media (max-width: 458px) {
-    margin-right: 90%;
+    // margin-right: 90%;
   }
   @media (width: 375px) {
   }
@@ -317,9 +311,10 @@ background-color: white;
 position:absolute;
 margin-left:30px;
 @media (max-width: 768px) {
+  position:absolute;
   max-width:100%;
   margin:0px;
-  margin-left:-5%
+  margin-left:-4% !important;
  }
  @media (max-width: 458px) {
  }
@@ -331,9 +326,10 @@ margin-top:-22px;
 color:white;
 @media (max-width: 768px) {
   position:absolute;
-  max-width:100%;
+  max-width:100% !important;
   margin:0px;
-  margin-left:-5%
+  margin-left:-10%;
+  margin-top:0%;
  }
  @media (max-width: 458px) {
  }
@@ -341,11 +337,20 @@ color:white;
 `;
 
 const MoodIconDiv = styled(MoodIcon)`
+display:none !important;
 position:absolute;
-margin-top:-25px;
+margin-top:-20px !important;
 color:white;
 margin-left:83%;
 cursor:pointer;
+@media (max-width: 768px) {
+  position:absolute;
+  max-width:100% !important;
+  margin:0px;
+  margin-top:2% !important;
+}
+@media (max-width: 458px) {
+}
 `;
 
 const ProfileImg = styled.img`
@@ -355,12 +360,11 @@ height:150px;
 margin-top:-100px;
 margin-left:50px;
 @media (max-width: 768px) {
-  max-width:90%;
+  max-width:100%;
   margin:0px;
-  margin-left:-20%;
+  margin-left:-10%;
 }
 @media (max-width: 458px) {
-  width:100%;
 }
 `;
 

@@ -166,7 +166,7 @@ function OnlineHtml(props) {
                 return (
                     <CardDiv>
                         <MainCard >
-                            <CardContentDiv>
+                            <CardContentDiv onClick={() => props.ItemPage(item.hotelName)}>
                                 <OrderItemImage src={FoodImage2} /><ContentHeader onClick={() => props.ItemPage(item.hotelName)}>{item.hotelName}</ContentHeader>
                                 <ContentText>
                                     {item.style}
