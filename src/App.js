@@ -87,6 +87,7 @@ const CloseIconButton = styled.div`
 
 const Nav = styled.nav`
 postion:relative;
+// display:inline-block;
   @media (max-width: 768px) {
     max-width:100%;
     margin:0px;
@@ -289,14 +290,14 @@ const AddShoppingCartIconDiv = styled(AddShoppingCartIcon)`
 // background-color: white;
 position:absolute;
 margin-left:85%;
-margin-top:-10px;
+margin-top:-10px !important;
   @media (max-width: 768px) {
     position:absolute;
     max-width:100%;
     margin:0px;
     color:white !important;
     margin-left:-17%;
-    margin-top:2%;
+    margin-top:2% !important;
   }
   @media (max-width: 458px) {
     // margin-right: 90%;
@@ -322,36 +323,21 @@ margin-left:30px;
 const ShoppingCartCount = styled.p`
 position:absolute;
 margin-left:86.6%;
-margin-top:-22px;
+margin-top:-22px !important;
 color:white;
 @media (max-width: 768px) {
   position:absolute;
   max-width:100% !important;
   margin:0px;
   margin-left:-10%;
-  margin-top:0%;
+  margin-top:0% !important;
  }
  @media (max-width: 458px) {
  }
 
 `;
 
-const MoodIconDiv = styled(MoodIcon)`
-display:none !important;
-position:absolute;
-margin-top:-20px !important;
-color:white;
-margin-left:83%;
-cursor:pointer;
-@media (max-width: 768px) {
-  position:absolute;
-  max-width:100% !important;
-  margin:0px;
-  margin-top:2% !important;
-}
-@media (max-width: 458px) {
-}
-`;
+
 
 const ProfileImg = styled.img`
 border-radius:50%;
@@ -370,15 +356,77 @@ margin-left:50px;
 
 
 
+
+const MoodIconDiv = styled(MoodIcon)`
+position:absolute;
+margin-top:-20px !important;
+margin-left:150vh;
+color: white;
+font-size: 16px;
+border: none;
+cursor: pointer;
+// margin-left:-50% !important;
+
+@media (max-width: 768px) {
+  display:none !important;
+  position:absolute;
+  max-width:100% !important;
+  margin:0px;
+  // margin-left:-100px !important;
+  margin-top:2% !important;
+}
+@media (max-width: 458px) {
+}
+`;
+const DropDownDiv = styled.div`
+  display: none;
+  margin-left:135vh;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius:10px;
+  @media (max-width: 768px) {
+    position:absolute;
+    // max-width:100% !important;
+    margin:0px;
+    background-color:red;
+    // margin-left:-100px !important;
+    margin-top:2% !important;
+  }
+  @media (max-width: 458px) {
+  }
+`;
+
+
+const DropDownDivMain = styled.div`
+position: absolute;
+border-radius:10px;
+
+&:hover ${DropDownDiv} {
+  display: block;
+}
+`;
+
+const A1 = styled.a`
+color: black;
+padding: 10px 10px;
+text-decoration: none;
+display: block;
+&:hover {
+  color:red;
+}
+`;
+
+
+
 function App() {
 
   const CartCount = useSelector(state => state.CartReducer)
   const [state, setState] = React.useState({
     open: false,
   });
-
-
-
   const toggleDrawer = event => {
     if (
       event.type === 'keydown' &&
@@ -417,7 +465,16 @@ function App() {
             <Nav>
               <Ul>
                 <Li>
-                  <MoodIconDiv></MoodIconDiv>
+                  <DropDownDivMain>
+                    <MoodIconDiv></MoodIconDiv>
+                    <DropDownDiv>
+                    <A1 href="/">Home</A1>
+                      <A1 href="/online">Order Food</A1>
+                      <A1 href="/profile">Profile</A1>
+                      <A1 href="/notification">Notification</A1>
+                      <A1 href="/about">About us</A1>
+                    </DropDownDiv>
+                  </DropDownDivMain>
                 </Li>
                 <Li>
                   <ShoppingCartCount>{CartCount.length}</ShoppingCartCount><A href="/cart"><AddShoppingCartIconDiv></AddShoppingCartIconDiv></A>
@@ -440,7 +497,6 @@ function App() {
               <DrawerLi>
                 < ProfileImg src={SE} />
               </DrawerLi>
-
               <DrawerLi>
                 <HomeIconDivD></HomeIconDivD><As href="/">Home</As>
               </DrawerLi>
