@@ -28,6 +28,8 @@ import ItemList from './_components/_containers/OrderFoodOnline/ItemList/ItemLis
 
 import SE from '../src/_assets/se2.jpg';
 import MoodIcon from '@material-ui/icons/Mood';
+import About from './_components/_containers/AboutPage/About';
+import Address from './_components/_containers/AddressPage/Address';
 
 
 
@@ -472,7 +474,7 @@ function App() {
                       <A1 href="/online">Order Food</A1>
                       <A1 href="/profile">Profile</A1>
                       <A1 href="/notification">Notification</A1>
-                      <A1 href="/about">About us</A1>
+                      <A1 href="/about">Contact Me ?</A1>
                     </DropDownDiv>
                   </DropDownDivMain>
                 </Li>
@@ -521,7 +523,7 @@ function App() {
                 <ContactMailIconDiv></ContactMailIconDiv><As href="/address">Your Addresses</As>
               </DrawerLi>
               <DrawerLi>
-                <InfoIconDiv></InfoIconDiv><As href="/about">About Us</As>
+                <InfoIconDiv></InfoIconDiv><As href="/about">Contact Me?</As>
               </DrawerLi>
             </DrawerUl>
           </DrawerNav>
@@ -533,6 +535,8 @@ function App() {
             <Route exact path="/online" component={Online} />
             <Route exact path="/itemList" component={ItemList} />
             <Route exact path="/cart" component={Cart} />
+            <Route exact path="/about" component={About} />
+            {/* <Route exact path="/address" component={Address} /> */}
             <Route path="**" component={PageNotFound} />
           </Switch>
         </Router>
