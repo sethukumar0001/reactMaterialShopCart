@@ -31,6 +31,7 @@ import MoodIcon from '@material-ui/icons/Mood';
 import About from './_components/_containers/AboutPage/About';
 import Address from './_components/_containers/AddressPage/Address';
 
+import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
 
 
 
@@ -359,7 +360,7 @@ margin-left:50px;
 
 
 
-const MoodIconDiv = styled(MoodIcon)`
+const CalendarViewDayIconDiv = styled(CalendarViewDayIcon)`
 position:absolute;
 margin-top:-20px !important;
 margin-left:150vh;
@@ -468,7 +469,7 @@ function App() {
               <Ul>
                 <Li>
                   <DropDownDivMain>
-                    <MoodIconDiv></MoodIconDiv>
+                    <CalendarViewDayIconDiv></CalendarViewDayIconDiv>
                     <DropDownDiv>
                     <A1 href="/">Home</A1>
                       <A1 href="/online">Order Food</A1>
@@ -536,7 +537,7 @@ function App() {
             <Route exact path="/itemList" component={ItemList} />
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/about" component={About} />
-            {/* <Route exact path="/address" component={Address} /> */}
+            <Route exact path="/address" component={Address} />
             <Route path="**" component={PageNotFound} />
           </Switch>
         </Router>
