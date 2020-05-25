@@ -207,9 +207,23 @@ margin-left:2%;
    }
 `;
 
-const MoreVertIconDiv = styled(MoreVertIcon)`
+const ActionDIv = styled.div`
 position:absolute;
-margin-left:33%;
+margin-top:-1%;
+margin-left:34%;
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0px;
+    margin-left:75%;
+    margin-top:-6%;
+   }
+   @media (max-width: 458px) {
+   }
+`;
+
+const MoreVertIconDiv = styled(MoreVertIcon)`
+position: relative;
+display: inline-block;
 color:gray;
 @media (max-width: 768px) {
     max-width:100%;
@@ -218,9 +232,28 @@ color:gray;
    }
    @media (max-width: 458px) {
    }
-
 `;
 
+const DropDownContent = styled.div`
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 120px;
+overflow: auto;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+font-family:times;
+`
+const A = styled.a`
+color: black;
+padding: 6px 16px;
+text-decoration: none;
+display: block;
+`;
+
+const Show = styled.div`
+display:block;
+`;
 function AddressHtml(props) {
     const [showFormDiv, setShowFormDiv] = useState(false)
     const [pincode, setPincode] = useState('');
@@ -251,6 +284,9 @@ function AddressHtml(props) {
     }
     const handleCancel = () => {
         setShowFormDiv(false)
+    }
+    const myFunction = () => {
+        document.getElementById("myDropdown").classList.toggle("show");
     }
     return (
         <MainDiv>
@@ -355,7 +391,15 @@ function AddressHtml(props) {
             </AddNewAdd>
 
             <ListAddDiv>
-                <TopText>Home</TopText><MoreVertIconDiv />
+                <TopText>Home</TopText>
+                <ActionDIv>
+                    <MoreVertIconDiv onClick={myFunction}/>
+                    <DropDownContent id="myDropdown">
+                    <A >Edit</A>
+                    <A >Delete</A>
+                    </DropDownContent>
+
+                </ActionDIv>
                 <SubText>Sethu Kumar</SubText>
                 <Subtext1>8886257181</Subtext1>
                 <Subtext2>No. 17, 10th Cross, Mayura Street, Papanna Layout, Nagashettyhalli (RMV II Stage), Bengaluru - 560094 Karnataka, India, 10th Cross, Mayura Street, Papanna Layout, Nagashettyhalli (RMV II Stage),, Bengaluru, Karnataka - 560094
