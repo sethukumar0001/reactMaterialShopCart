@@ -25,6 +25,7 @@ import OrdersHtml from './_components/_containers/YourOrders/Orders';
 import Cart from './_components/_containers/Cart/Cart';
 import Online from './_components/_containers/OrderFoodOnline/Online';
 import ItemList from './_components/_containers/OrderFoodOnline/ItemList/ItemList';
+import Notification from './_components/_containers/Notifications/Notification';
 
 import SE from '../src/_assets/se2.jpg';
 import MoodIcon from '@material-ui/icons/Mood';
@@ -363,7 +364,7 @@ margin-left:50px;
 const CalendarViewDayIconDiv = styled(CalendarViewDayIcon)`
 position:absolute;
 margin-top:-20px !important;
-margin-left:150vh;
+margin-left:160vh !important;
 color: white;
 font-size: 16px;
 border: none;
@@ -375,7 +376,6 @@ cursor: pointer;
   position:absolute;
   max-width:100% !important;
   margin:0px;
-  // margin-left:-100px !important;
   margin-top:2% !important;
 }
 @media (max-width: 458px) {
@@ -383,7 +383,7 @@ cursor: pointer;
 `;
 const DropDownDiv = styled.div`
   display: none;
-  margin-left:135vh;
+  margin-left:145vh;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
@@ -538,6 +538,7 @@ function App() {
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/about" component={About} />
             <Route exact path="/address" component={Address} />
+            <Route exact path="/notification" component={Notification} />
             <Route path="**" component={PageNotFound} />
           </Switch>
         </Router>
