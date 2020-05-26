@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import coffee from '../../../_assets/coffee1.jpg';
+import Noty from '../../../_assets/noty.jpg';
 
 
 const MainDiv = styled.div`
@@ -73,12 +74,27 @@ top:-10%;
    @media (max-width: 458px) {
    }
 `;
+const Notification = styled.img`
+   width:500px;
+   height:500px;
+   margin-left:30%;
+   margin-right:30%;
+
+@media (max-width: 768px) {
+    max-width:100%;
+    margin:0px;
+    height:400px;
+    margin-top:10%;
+   }
+   @media (max-width: 458px) {
+   }
+`;
 
 
 function NotificationHtml(props) {
     return (
         <MainDiv>
-            <HeaderText>
+            {/* <HeaderText>
                 Notifications :
             </HeaderText>
             <Hr />
@@ -88,7 +104,9 @@ function NotificationHtml(props) {
                 Your Item is Delivered Successfully.
                 <Time>4:30 pm</Time>
             </AddNewNotification>
-            <Hr />
+            <Hr /> */}
+
+            <Notification src={Noty} />
         </MainDiv>
     );
 }
