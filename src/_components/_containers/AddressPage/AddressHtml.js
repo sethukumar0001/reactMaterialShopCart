@@ -4,6 +4,8 @@ import AddIcon from '@material-ui/icons/Add';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 
 const MainDiv = styled.div`
@@ -263,7 +265,8 @@ function AddressHtml(props) {
     const [address, setAddress] = useState("");
     const [city, setCity] = useState("");
     const [state, setState] = useState("");
-    const [role,setRole] = useState("")
+    const [role,setRole] = useState("");
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -285,9 +288,12 @@ function AddressHtml(props) {
     const handleCancel = () => {
         setShowFormDiv(false)
     }
-    const myFunction = () => {
-        document.getElementById("myDropdown").classList.toggle("show");
+    const myFunction = (event) => {
+        setAnchorEl(event.currentTarget);
     }
+    const handleClose = () => {
+        setAnchorEl(null);
+      };
     return (
         <MainDiv>
             <HeaderText>My Addresses :</HeaderText>
@@ -394,11 +400,16 @@ function AddressHtml(props) {
                 <TopText>Home</TopText>
                 <ActionDIv>
                     <MoreVertIconDiv onClick={myFunction}/>
-                    <DropDownContent id="myDropdown">
-                    <A >Edit</A>
-                    <A >Delete</A>
-                    </DropDownContent>
-
+                    <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+                    <MenuItem onClick={handleClose}>Edit</MenuItem>
+                    <MenuItem onClick={handleClose}>Delete</MenuItem>
+                    </Menu>
                 </ActionDIv>
                 <SubText>Sethu Kumar</SubText>
                 <Subtext1>8886257181</Subtext1>
