@@ -364,7 +364,7 @@ margin-left:50px;
 const CalendarViewDayIconDiv = styled(CalendarViewDayIcon)`
 position:absolute;
 margin-top:-20px !important;
-margin-left:160vh !important;
+margin-left:150vh !important;
 color: white;
 font-size: 16px;
 border: none;

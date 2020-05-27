@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -20,9 +20,18 @@ import SearchIcon from '@material-ui/icons/Search';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import LocationCityIcon from '@material-ui/icons/LocationCity';
 
+import FastfoodIcon from '@material-ui/icons/Fastfood';
+
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+
+
+
+import PlacesAutocomplete, {
+    geocodeByAddress,
+    getLatLng,
+} from 'react-places-autocomplete';
 
 const BodyDiv = styled.body`
 background-color:white;
@@ -90,8 +99,8 @@ const InputStyleForSearch = styled.input`
 background-color:white;
 border:none;
 padding:15px;
-width:20%;
-margin-left:23%;
+width:100%;
+margin-left:63%;
 border-radius:5px;
 padding-left:40px;
 outline: none;
@@ -107,16 +116,27 @@ font-size:15px;
   @media (max-width: 458px) {
   }
 `;
+const SuggetionDiv = styled.div`
+margin-left:68% !important;
+width:300px !important;
+`;
 
 const InputStyleForSearch1 = styled.input`
+position:fixed !important;
 background-color:white;
 border:none;
-padding:10px;
-width:20%;
-margin-left:10px;
+padding:15px;
+// width:100%;
+width:300px;
+margin-left:18% !important;
 border-radius:5px;
 padding-left:40px;
-
+outline: none;
+font-size:15px;
+z-index:1;
+position:absolute;
+margin-left:45% !important;
+margin-top:-3.5% !important;
 outline: none;
 font-size:15px;
 @media (max-width: 768px) {
@@ -133,7 +153,7 @@ font-size:15px;
 `;
 
 const SearchButton = styled.button`
-margin-left:10px;
+margin-left:40px;
 background-color:white !important;
 width:50px;
 border:none;
@@ -164,7 +184,7 @@ margin-top:5px;
 const LocationOnIconTag = styled(LocationOnIcon)`
 background-color:white;
 position: absolute;
-left:23.5%;
+left:14.5%;
 margin-top:12px;
 @media (max-width: 768px) {
     max-width:50%;
@@ -175,10 +195,29 @@ margin-top:12px;
   @media (max-width: 458px) {
   }
 `;
+
+const LocationOnIconTagSuggetion = styled(LocationOnIcon)`
+background-color:white;
+position: absolute;
+left:14.5%;
+margin-top:12px;
+@media (max-width: 768px) {
+    max-width:50%;
+    margin:0px;
+    margin-left:-4%;
+    margin-top:2%
+  }
+  @media (max-width: 458px) {
+  }
+`;
+const ListStyle = styled.li`
+list-style-type: none;
+`;
+
 const LocationCityIconTag = styled(LocationCityIcon)`
 background-color:white;
 position: absolute;
-left:48.5%;
+left:40.6%;
 margin-top:12px;
 @media (max-width: 768px) {
     max-width:50%;
@@ -190,6 +229,21 @@ margin-top:12px;
   }
 `;
 
+
+const FastfoodIconTag = styled(FastfoodIcon)`
+background-color:white;
+position: absolute;
+left:40.6%;
+margin-top:12px;
+@media (max-width: 768px) {
+    max-width:50%;
+    margin:0px;
+    margin-left:-29%;
+    margin-top:13%
+  }
+  @media (max-width: 458px) {
+  }
+`;
 
 //card div
 
@@ -373,6 +427,32 @@ font-size:14px;
 
 
 function MainHomeHtml(props) {
+
+    const [address, setAddress] = useState("")
+    const [address1, setAddress1] = useState("")
+    
+
+    const handleChange = address => {
+        setAddress(address)
+    };
+
+    const handleSelect = address => {
+        geocodeByAddress(address)
+            .then(results => getLatLng(results[0]))
+            .then(latLng => console.log('Success', latLng))
+            .catch(error => console.error('Error', error));
+    };
+    const handleChange1 = address => {
+        setAddress(address)
+    };
+
+    const handleSelect1 = address => {
+        geocodeByAddress(address)
+            .then(results => getLatLng(results[0]))
+            .then(latLng => console.log('Success', latLng))
+            .catch(error => console.error('Error', error));
+    };
+
     return (
         <React.Fragment>
             <BodyDiv>
@@ -385,22 +465,70 @@ function MainHomeHtml(props) {
                         showThumbs={false}
                         showArrows={false}
                         infiniteLoop
-                        autoPlay
+                        // autoPlay
                     >
-                        <CarouselImages src={FoodImage1} />
                         <CarouselImages src={FoodImage2} />
+                        <CarouselImages src={FoodImage1} />
                         <CarouselImages src={FoodImage3} />
                     </CarouselMain>
                 </CarouselDiv>
 
                 {/* Search div */}
+
                 <SearchDiv>
-                    <LocationOnIconTag />
-                    <InputStyleForSearch placeholder="Seach by Location" />
-                    <LocationCityIconTag />
-                    <InputStyleForSearch1 placeholder="Seach by Item" />
-                    <SearchButton type="submit"><SearchIconTag /></SearchButton>
+                    <PlacesAutocomplete
+                        value={address}
+                        onChange={handleChange}
+                        onSelect={handleSelect}
+                    >
+                        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (<div>
+                            <LocationOnIconTag />
+                            <InputStyleForSearch
+                                {...getInputProps({
+                                    placeholder: 'Search Places ...',
+                                    // className: 'location-search-input',
+                                })}
+                            />
+                         <SuggetionDiv>   
+                            <ul>
+                          {loading && (
+                            <ListStyle>
+                              <button>Loading...</button>
+                            </ListStyle>
+                          )}
+                          {suggestions.map(suggestion => {
+                            const className = suggestion.active
+                              ? "suggestion-item--active"
+                              : "suggestion-item";
+                            // inline style for demonstration purpose
+                            const style = suggestion.active
+                              ? { backgroundColor: "#fafafa",cursor: "pointer" }
+                              : {backgroundColor: "#ffffff",cursor: "pointer" };
+                            return (
+                              <ListStyle
+                                {...getSuggestionItemProps(suggestion, {
+                                  className,
+                                  style
+                                })}
+                              >
+                                <button>{suggestion.description}</button>
+                              </ListStyle>
+                            );
+                          })}
+                        </ul>
+                        </SuggetionDiv>
+                         </div>
+                        )}
+                    </PlacesAutocomplete>
+
+                        
                 </SearchDiv>
+                {/* <SearchDiv>
+                <FastfoodIconTag />
+                            <InputStyleForSearch1
+                                placeholder="Search by Item ..."
+                            />
+                </SearchDiv> */}
 
                 {/* Card div */}
                 <CardDiv>
@@ -531,4 +659,5 @@ function MainHomeHtml(props) {
 }
 
 export default MainHomeHtml;
+
 
